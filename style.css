@@ -1,0 +1,216 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background: #0073e6;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+header.sticky {
+    background: #005bb5;
+    transition: 0.3s;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Buttons */
+.btn {
+    background: #0073e6;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn:hover {
+    background: #005bb5;
+    transform: scale(1.05);
+    transition: 0.3s;
+}
+
+/* About Us Page Styles */
+.about-intro {
+    background: #0073e6;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+}
+
+.about-intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.about-intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: auto;
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.mission, .vision {
+    width: 45%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mission h3, .vision h3 {
+    color: #0073e6;
+    font-size: 1.8em;
+}
+
+.team {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.team h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* Services Page Styles */
+.services-intro {
+    background: #0073e6;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+}
+
+.services-intro h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.services-intro p {
+    font-size: 1.2em;
+    max-width: 800px;
+    margin: auto;
+}
+
+.services-list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 50px 20px;
+    background: #f8f9fa;
+}
+
+.service {
+    width: 30%;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.service h3 {
+    color: #0073e6;
+    font-size: 1.8em;
+}
+
+.service p {
+    font-size: 1.1em;
+    color: #333;
+}
+
+/* Contact Page Styles */
+.contact-intro {
+    background: #0073e6;
+    color: #fff;
+    text-align: center;
+    padding: 50px 20px;
+    margin-top: 80px;
+}
+
+.contact-form {
+    width: 50%;
+    margin: auto;
+    padding: 20px;
+    background: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+    display: block;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact-form .btn {
+    width: 100%;
+    margin-top: 15px;
+}
+
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px;
+}
