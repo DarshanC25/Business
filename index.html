@@ -4,52 +4,251 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Business Website</title>
-    <link rel="stylesheet" href="style.css">
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons (Optional) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
+    <style>
+        /* Custom Styles */
+        .hero {
+            background: url('images/BackGround.jpeg') no-repeat center center/cover;
+            background-size: cover;
+            color: white;
+            text-align: center;
+            padding: 200px 0 100px; /* Adjust padding to lower the hero section */
+            height: 100vh; /* Ensure it covers the full viewport */
+        }
+
+        .hero img {
+            width: 120px; /* Adjust logo size */
+            margin-bottom: 30px; /* Increase space between logo and title */
+        }
+
+        .hero h1 {
+            margin-bottom: 20px; /* Adjust space between title and paragraph */
+        }
+
+        .btn-custom {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .btn-custom:hover {
+            background-color: #0056b3;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+            transition: 0.3s;
+        }
+
+        footer {
+            background-color: #343a40;
+            color: white;
+            padding: 20px 0;
+        }
+
+        /* Add Background Image for "About Us" and "Explore Services" sections */
+        .section-bg {
+            background: url('images/BackGround2.jpeg') no-repeat center center/cover;
+            background-size: cover;
+            padding: 80px 0;
+            position: relative;
+            min-height: 500px; /* Ensure enough space for the cards */
+        }
+
+        .section-bg .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .section-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4); /* Darken background */
+            z-index: 0;
+        }
+
+        .section-text {
+            color: white;
+        }
+
+        /* Adjust card visibility */
+        .card-body i {
+            font-size: 40px;
+        }
+        
+        .card-body h5 {
+            font-size: 1.25rem;
+            margin-top: 20px;
+        }
+        
+        .card-body p {
+            font-size: 1rem;
+            color: #ccc;
+        }
+
+        /* Fixing the card layout issue */
+        .row {
+            margin-top: 40px;
+        }
+
+        .card {
+            margin-bottom: 20px; /* Ensure there's space between cards */
+        }
+
+        /* Responsive Adjustments */
+        @media (max-width: 767px) {
+            .card-body i {
+                font-size: 30px;
+            }
+
+            .card-body h5 {
+                font-size: 1.1rem;
+            }
+
+            .card-body p {
+                font-size: 0.9rem;
+            }
+        }
+
+    </style>
 </head>
 <body>
-    <header>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
-            <h1>Company Name</h1>
-            <nav>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo.png" alt="Mayur Engineers Logo" width="50" height="50" class="d-inline-block align-text-top">
+                Mayur Engineers
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
-    
-    <section class="hero">
-        <div class="container">
-            <h2>Welcome to Our Company</h2>
-            <p>We provide top-notch services and solutions for your business needs.</p>
-            <a href="services.html" class="btn">Explore Services</a>
-        </div>
-    </section>
-    
-    <section class="about-preview">
-        <div class="container">
-            <h2>About Us</h2>
-            <p>Learn more about our company's mission and values.</p>
-            <a href="about.html" class="btn">Read More</a>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero d-flex align-items-center justify-content-center text-center">
+        <div>
+            <img src="images/logo.png" alt="Mayur Engineers Logo" width="120" class="mb-3">
+            <h1>Mayur Engineers</h1>
+            <p class="lead">We provide top-notch services and solutions for your business needs.</p>
+            <a href="services.html" class="btn btn-custom">Explore Services</a>
         </div>
     </section>
-    
-    <section class="services-preview">
-        <div class="container">
-            <h2>Our Services</h2>
-            <p>We offer a variety of professional services tailored to your needs.</p>
-            <a href="services.html" class="btn">View Services</a>
+
+    <!-- About Us Preview -->
+    <section class="section-bg">
+        <div class="container text-center">
+            <h2 class="section-text">About Us</h2>
+            <p class="section-text">Learn more about our company's mission and values.</p>
+            <a href="about.html" class="btn btn-primary">Read More</a>
         </div>
     </section>
-    
-    <footer>
+
+    <!-- Services Section -->
+    <section class="section-bg">
+        <div class="container text-center">
+            <h2 class="section-text">Our Services</h2>
+            <p class="section-text">Chuck Reconditioning and Precision Work Holding Solutions in Bengaluru</p>
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-gear-fill fs-1 text-primary"></i>
+                            <h5 class="card-title mt-2">Jaw Chuck</h5>
+                            <p class="card-text">Specialized jaw chucks for high-precision clamping.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-tools fs-1 text-success"></i>
+                            <h5 class="card-title mt-2">Four Jaw Chuck</h5>
+                            <p class="card-text">Independent 4-jaw chucks with adapter plates and mounting solutions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-box-seam fs-1 text-danger"></i>
+                            <h5 class="card-title mt-2">Hard Jaws</h5>
+                            <p class="card-text">Durable, pre-hardened jaws for high-torque operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-4">
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-hammer fs-1 text-warning"></i>
+                            <h5 class="card-title mt-2">Lathe Chucks</h5>
+                            <p class="card-text">Precision 3-jaw and 4-jaw lathe chucks for machining.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-recycle fs-1 text-info"></i>
+                            <h5 class="card-title mt-2">Chuck Reconditioning</h5>
+                            <p class="card-text">Professional maintenance and reconditioning of used chucks.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <i class="bi bi-lightning fs-1 text-primary"></i>
+                            <h5 class="card-title mt-2">Power Chucks</h5>
+                            <p class="card-text">High-performance chucks for CNC and automated machining.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <a href="services.html" class="btn btn-primary mt-3">View Services</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
         <div class="container">
-            <p>&copy; 2025 Company Name. All rights reserved.</p>
+            <p>&copy; 2025 Mayur Engineers. All rights reserved.</p>
+            <p>
+                <a href="#" class="text-white me-2"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="text-white me-2"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.instagram.com/murthyadithya/?igsh=MXVlOXg3bnU2MXpjeA%3D%3D#" class="text-white me-2"><i class="bi bi-instagram"></i></a>
+            </p>
         </div>
     </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 </html>
